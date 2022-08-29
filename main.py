@@ -22,5 +22,5 @@ app = create_app()
 from application.controllers import *
 
 if __name__ == "__main__":
-    app.run(port=4555, debug=True, threaded=True)
+    app.run(port=4555, debug=True)
 
