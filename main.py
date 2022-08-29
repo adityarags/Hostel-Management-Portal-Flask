@@ -15,11 +15,12 @@ def create_app():
     app.app_context().push()
     user_datastore = SQLAlchemySessionUserDatastore(db.session, User, Role)
     security = Security(app, user_datastore)
+
     return app
 
 app = create_app()
 from application.controllers import *
 
 if __name__ == "__main__":
-    app.run(host = "0.0.0.0", port = 8080, debug = True)
+    app.run(port=4555, debug=True, threaded=True)
 
