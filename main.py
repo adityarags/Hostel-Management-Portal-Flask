@@ -15,7 +15,6 @@ def create_app():
     app.app_context().push()
     user_datastore = SQLAlchemySessionUserDatastore(db.session, User, Role)
     security = Security(app, user_datastore)
-
     return app
 
 app = create_app()

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Raise a Complaint</h1>
+    <div class="form" style = "width:80%; margin:auto">
+        <form action = "/raisecomplaint" method = "POST">
+
+            <!-- Hostel Name -->
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"> Hostel Name</span>
+                <input type="text" name = "hname" class="form-control" aria-label="Hostel_Name" aria-describedby="basic-addon1">
+            </div>
+
+            <!-- Category Of The Issue -->
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Category Of The Issue</span>
+                <input type="text" name = "cat" class="form-control" aria-label="Issue_Category" aria-describedby="basic-addon1">
+            </div>
+
+            <!-- Name Of The Person, -->
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"> Your Name</span>
+                <input type="text" name = "pname" class="form-control" aria-label="Your_Name" aria-describedby="basic-addon1">
+            </div>
+
+            <!-- Availability -->
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"> Availability </span>
+                <input type="text" name = "avail" class="form-control" aria-label="Availability" aria-describedby="basic-addon1">
+            </div>
+
+            <!-- Room Number -->
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"> Room Number </span>
+                <input type="number" name = "rno" class="form-control" aria-label="Hostel Name" aria-describedby="basic-addon1">
+            </div>
+
+            <!-- Phone Number -->
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Phone Number</span>
+                <input type="number" name = "mno" class="form-control" aria-label="Hostel Name" aria-describedby="basic-addon1">
+            </div>
+
+            <!-- Description -->
+            <div class="input-group">
+                <span class="input-group-text">Description</span>
+                <textarea class="form-control" name = "desc" aria-label="With textarea"></textarea>
+            </div>
+            <div class = "button" style = "padding-top: 10px; padding-bottom:10px">
+                <button class="btn btn-primary" name = "submit" type="submit">Submit form</button>
+            </div>
+            <p><a href = "/"><button type="button" class="btn btn-outline-primary">Go to Welcome Page </button></a></p>
+
+        </form>
+    </div>
+
+    
+</body>
+</html>

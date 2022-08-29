@@ -22,4 +22,29 @@ class Role(db.Model, RoleMixin):
     description = db.Column(db.String(255))
 
 
+class Complaint(db.Model):
+    __tablename__ = "complaint"
+    id = db.Column(db.Integer, primary_key = True, autoincrement = True)
+    userid = db.Column(db.Integer)
+    hostelName = db.Column(db.String(255))
+    category = db.Column(db.String(255))
+    name = db.Column(db.String(255))
+    availability = db.Column(db.String(255))
+    room_no = db.Column(db.Integer)
+    phone_no = db.Column(db.Integer)
+    description = db.Column(db.String(255))
+    status = db.Column(db.String(255))
+    extra = db.Column(db.String(255))
+
+    def __init__(self, userid, hostelName, category, name, avail, rno, pno, desc):
+        self.userid = userid
+        self.hostelName = hostelName
+        self.category = category
+        self.name = name
+        self.availability = avail
+        self.room_no = rno
+        self.phone_no = pno
+        self.description = desc
+        self.status = "Pending"
+        self.extra = "-"
 
